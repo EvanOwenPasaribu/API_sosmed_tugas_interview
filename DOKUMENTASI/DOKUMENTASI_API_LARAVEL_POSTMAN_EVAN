@@ -1,0 +1,701 @@
+{
+	"info": {
+		"_postman_id": "f8c674bb-019b-4fab-91b9-38b0f3e42703",
+		"name": "API_LARAVEl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12157048"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Jira",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "say",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "08234234234",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "2010-11-5",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "jirasay3211",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jirasay3121@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/register",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "john_doe@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/login",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/user",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/postingan",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"postingan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/search?keyword=evan_owen",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "evan_owen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Postingan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "caption",
+							"value": "ini postingan saya ya guys",
+							"type": "text"
+						},
+						{
+							"key": "image[]",
+							"type": "file",
+							"src": "/C:/Users/user/Downloads/user/20220806124643.png",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/insert-post",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"insert-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Postingan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "caption",
+							"value": "text update postingan",
+							"type": "text"
+						},
+						{
+							"key": "image[]",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/update-post/2?_method=PUT",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"update-post",
+						"2"
+					],
+					"query": [
+						{
+							"key": "_method",
+							"value": "PUT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Postingan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/delete-post/{{id_post}}",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"delete-post",
+						"{{id_post}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like Postingan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/like-post",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"like-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike Postingan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/unlike-post",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"unlike-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment Postingan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "Komentar Saya Ini",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/comment-post",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"comment-post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_account",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/follow-user",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"follow-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unfollow User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzk4MWNlNDEyMjc2YTFkYWIwYjVlMjJkMWRjZGQyOTEyN2JmN2M0YjkzM2Y1NGI4MWU3ZTQzODg4OTU2ZDNlYWQ2OTRhMmNiZTdhYjllZTEiLCJpYXQiOjE2NzUzMzIxNjguNTU4NzkzLCJuYmYiOjE2NzUzMzIxNjguNTU4Nzk1LCJleHAiOjE3MDY4NjgxNjguNTQ5MjY2LCJzdWIiOiIxMiIsInNjb3BlcyI6W119.NoR3cZDk8sdIc9qfGKhwikuJkmyzkxjCAUcymtF7Hfiud_oY3T8lmOQAyMusEX78M0EXu2PrhlZ5ecBS3z28STSe2wTb9xNKIgBXmIUpoBJVh8znzla_Rtn7g6vd7huYMqYsH8NT043Fm5ucLcwBOTXJ5FnuQnBk3FKJnF_Ufrop-SjFe7_z9AsiBltHDYSWSgH5vy1NdbdCdqwBAjmkaP-_f4MUDAKfplDzjAYiFSYo6jGiGM31nYSQEpo1CSe8KWm_iMAWpZ5hN-kZa_8pyYfw1XG533-rlxFyxZ6dI_7vvyfPk2EQCNF0ArUdJ4jXW93DZKSUhIQsZDNMSCT_Qv7FrYFOHHcCoueilgrU6TuqN_uQfJj6aB-G-4osXoBYYdmOZ4yiNJICGsu4bQs4dbe0bg9vXEiXFmv15ooDaXZG7-gXjir9MaqBucgk8qduZD1gFtfXI0XHlPjM--jquR7FffQESfj5SyYesJ8one3ddAL_7yqR0gANgNmyNKDbcKYLDz9qSZENh1GIFAbKy6wmZtjCbwyS5av6_ltAEmV8neCnew3eKBcKu7hsIGHxR2VB3S9hq2mNLlnQvRsZy-_sxRH73ulfKaWFpfLJyKJxHX2I9uMqsmPRCgJKa7duJ2SHInxO71hDhQ9lmbNzMfsTuZBnRyeXUTjsWZ275Ng",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_account",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devtesting.grandcemaraasri.com/api/unfollow-user",
+					"protocol": "https",
+					"host": [
+						"devtesting",
+						"grandcemaraasri",
+						"com"
+					],
+					"path": [
+						"api",
+						"unfollow-user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
